@@ -16,40 +16,36 @@ public class calculadora {
         System.out.println(
                 "Qual operação?\n1 - Soma\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n5 - Exponenciação\n6 - Fatorial");
         int operacao = entrada.nextInt();
-
+        operacoes operacaoObjt = new operacoes();
         switch (operacao) {
             case 1:
-                operacoes operacaoObjC = new adicao();
-                resultado = operacaoObjC.calcular(num1, num2);
+                operacaoObjt = new adicao();
                 break;
 
             case 2:
-                operacoes operacaoObjS = new subtracao();
-                resultado = operacaoObjS.calcular(num1, num2);
+                operacaoObjt = new subtracao();
                 break;
 
             case 3:
-                operacoes operacaoObjM = new multiplicacao();
-                resultado = operacaoObjM.calcular(num1, num2);
+                operacaoObjt = new multiplicacao();
                 break;
 
             case 4:
-                operacoes operacaoObjD = new divisao();
-                resultado = operacaoObjD.calcular(num1, num2);
+                operacaoObjt = new divisao();
                 break;
 
             case 5:
-                operacoes operacaoObjE = new exponenciacao();
-                resultado = operacaoObjE.calcular(num1, num2);
+                operacaoObjt = new exponenciacao();
                 break;
 
             case 6:
-                operacoes operacaoObjF = new fatorial();
-                resultado = operacaoObjF.calcular(num1, num2);
+                operacaoObjt = new fatorial();
                 break;
             default:
                 break;
         }
+
+        resultado = operacaoObjt.calcular(num1, num2);
 
         System.out.println("resultado: " + resultado);
 
