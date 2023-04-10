@@ -7,7 +7,7 @@ public class fatorial extends operacoes {
         for (int i = 0; i < num2; i++) {
             
             if (i == 0) {
-                resultado = num1 * (i+1);
+                resultado = 1;
             } else {
                 resultado = resultado * (i+1);
             }
